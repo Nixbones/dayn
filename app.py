@@ -12,7 +12,7 @@ SECRET_SALT = "NixBones_Render_2026" # Обязательно смени и та
 
 # Список разрешенных HWID
 WHITELIST = [
-    "ТВОЙ_HWID_КОТОРЫЙ_ВЫДАЕТ_БОТ",
+    "﻿7C1C98FC32FEAB8EEDDE92ACE8893C4DC342CBAC550548FCC37E417C8DF2F70C",
 ]
 
 @app.route('/check', methods=['POST'])
@@ -42,4 +42,5 @@ def check():
         return jsonify({"status": "error", "details": str(e)}), 500
 
 if __name__ == "__main__":
+
     app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
